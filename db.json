@@ -1,0 +1,18 @@
+{
+  "employees": [
+    {
+      "id": "1",
+      "name": "mani",
+      "email": "mani@gmail.com",
+      "password": "pass@123",
+      "contact": "+910123456789"
+    },
+    {
+      "id": "Nw1QXgE",
+      "name": "admin",
+      "email": "admin@123",
+      "password": "aaaaaaaaaaaaaaaaaa",
+      "contact": "999999999999"
+    }
+  ]
+}

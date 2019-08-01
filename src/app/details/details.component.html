@@ -1,0 +1,34 @@
+<app-header></app-header>
+<div class="container">
+    <div class="row">
+        <div class="col-6" style="margin-top: 10%;">
+            <div id="AddBtn">
+                <a (click)="addMethod();" class="btn btn-success btn-xs pull-right">Add</a>
+            </div>
+            
+            <div class="table table-bordered table-sm">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>NAME</th>
+                        <th>EMAIL</th>
+                        <th>PASSWORD</th>
+                        <th>CONTACT</th>
+                    </tr>
+                </thead>
+                <tr *ngFor="let detail of EmployeeTable">
+                    <td>{{detail.id}}</td>
+                    <td>{{detail.name}}</td>
+                    <td>{{detail.email}}</td>
+                    <td>{{detail.password}}</td>
+                    <td>{{detail.contact}}</td>
+
+                    <div id="delBtn">
+                            <a (click)="delMethod(detail.id)" class="btn btn-danger btn-xs pull-right">Delete</a>
+                        </div>
+
+                </tr>
+            </div>
+        </div> 
+    </div>
+</div>

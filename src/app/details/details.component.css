@@ -1,0 +1,13 @@
+.table{
+ 
+     margin-top: 5px;
+     border:0px !important; 
+}
+#AddBtn{
+    text-align: left;
+}
+#delBtn{
+    margin-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
