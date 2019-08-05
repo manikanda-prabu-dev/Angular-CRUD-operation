@@ -10,18 +10,25 @@ export class ApiService {
   constructor(
     private httpClient : HttpClient
   ) { }
-  create(employee:EmployeeModel){
+  create(employee:EmployeeModel){ 
     return this.httpClient.post(this.BASE_URL,employee);
   }
   getList() {
     return this.httpClient.get(this.BASE_URL);
   }
 
-  putList(employee:EmployeeModel){
+  getById(id:string) {
+    return this.httpClient.get(this.BASE_URL+`/${id}`);
+  }
+
+  putList(employee){
+    console.log("api emp",employee);
    return this.httpClient.put(this.BASE_URL+'/'+employee.id,employee);
+
   }
 
   deleteList(id:string){
+  
     return this.httpClient.delete(this.BASE_URL+`/${id}`);
   }
 }

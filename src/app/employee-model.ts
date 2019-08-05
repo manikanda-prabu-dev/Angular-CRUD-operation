@@ -2,6 +2,6 @@ export class EmployeeModel {
     id :number;
     name:string;
     email:string;
-    password:string;
+    age:number;
     contact:string;
 }

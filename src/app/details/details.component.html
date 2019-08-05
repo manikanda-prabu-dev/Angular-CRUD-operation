@@ -1,34 +1,41 @@
 <app-header></app-header>
-<div class="container">
-    <div class="row">
-        <div class="col-6" style="margin-top: 10%;">
-            <div id="AddBtn">
-                <a (click)="addMethod();" class="btn btn-success btn-xs pull-right">Add</a>
-            </div>
-            
-            <div class="table table-bordered table-sm">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>NAME</th>
-                        <th>EMAIL</th>
-                        <th>PASSWORD</th>
-                        <th>CONTACT</th>
-                    </tr>
-                </thead>
-                <tr *ngFor="let detail of EmployeeTable">
-                    <td>{{detail.id}}</td>
-                    <td>{{detail.name}}</td>
-                    <td>{{detail.email}}</td>
-                    <td>{{detail.password}}</td>
-                    <td>{{detail.contact}}</td>
-
-                    <div id="delBtn">
-                            <a (click)="delMethod(detail.id)" class="btn btn-danger btn-xs pull-right">Delete</a>
+<div id="body">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-6" style="margin-top: 10%;margin-left: 25%;">
+                <button class="tooltip" [routerLink]="['/register']" class="btn btn-success btn-xs pull-right">+
+                    Add</button>
+                <div class="table table-bordered table-sm" style="text-align: center">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>NAME</th>
+                            <th>EMAIL</th>
+                            <th>AGE</th>
+                            <th>CONTACT</th>
+                            <th>DELETE / UPDATE</th>
+                        </tr>
+                    </thead>
+                    <tr *ngFor="let detail of EmployeeTable">
+                        <td>{{detail.id}}</td>
+                        <td>{{detail.name}}</td>
+                        <td>{{detail.email}}</td>
+                        <td>{{detail.age}}</td>
+                        <td>{{detail.contact}}</td>
+                        <div>
+                            <td> <button id="delBtn" (click)="delMethod(detail.id)"
+                                    class="btn btn-danger btn-xs pull-right">Delete</button></td>
+                            <td><button id="addBtn" routerLink="/add/{{detail.id}}"
+                                    class="btn btn-primary btn-xs pull-right">Edit</button></td>
                         </div>
 
-                </tr>
+                    </tr>
+
+                </div>
+
             </div>
-        </div> 
+
+
+        </div>
     </div>
-</div>
+</div>  

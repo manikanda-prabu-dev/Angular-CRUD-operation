@@ -15,18 +15,21 @@ export class DetailsComponent implements OnInit {
   constructor(
     private api: ApiService,
     private router : Router,
-  
+    
     
     ) { }
 
     ngOnInit() {
       this.api.getList().subscribe((res) => {
+        
         this.api.employees = res as EmployeeModel[];
-       
+      
         this.EmployeeTable=this.api.employees;
         console.log(this.EmployeeTable);
 
       });
+
+      
       
     }
     addMethod(){
@@ -42,6 +45,7 @@ export class DetailsComponent implements OnInit {
         });
       }
     }
+    
   }
 
 

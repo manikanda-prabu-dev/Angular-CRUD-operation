@@ -4,15 +4,15 @@
       "id": "1",
       "name": "mani",
       "email": "mani@gmail.com",
-      "password": "pass@123",
-      "contact": "+910123456789"
+      "age": "23",
+      "contact": "0123456789"
     },
     {
-      "id": "Nw1QXgE",
-      "name": "admin",
-      "email": "admin@123",
-      "password": "aaaaaaaaaaaaaaaaaa",
-      "contact": "999999999999"
+      "id": "hL44Ih8",
+      "name": "venkatesh",
+      "email": "venkatesh@gmail.com",
+      "age": 28,
+      "contact": "+912345678993"
     }
   ]
 }

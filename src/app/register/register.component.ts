@@ -21,7 +21,7 @@ export class RegisterComponent implements OnInit {
       id:['', Validators.required],
       name:['', Validators.required],
       email : ['', Validators.required],
-      password : ['', Validators.required],
+      age : ['', Validators.required],
       contact : ['', Validators.required],
       
     })
@@ -29,9 +29,9 @@ export class RegisterComponent implements OnInit {
  post(event:any){
   this.api.create(this.myForm.value).toPromise().then(
     res =>{
-      alert('Updated Succesfully');
+      alert('Created Succesfully');
       this.myForm = this.formBuilder.group({
-      id:"",name:"",email:"",password:"",contact:"",
+      id:"",name:"",email:"",age:"",contact:"",
       })
     },
     error =>{
